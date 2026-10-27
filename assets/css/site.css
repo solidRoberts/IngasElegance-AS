@@ -76,6 +76,7 @@ nav a:hover::after{transform:scaleX(1)}
 @media(max-width:860px){.hero .wrap{grid-template-columns:minmax(0,1fr)}}
 .hero-tekst{display:grid;gap:1.6rem;justify-items:start}
 .pille{display:inline-flex;align-items:center;gap:.6rem;background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:.45rem 1rem .45rem .8rem;font-size:.92rem;color:var(--muted)}
+.hero h1 .pille{display:flex;width:fit-content;margin-bottom:1.6rem;font-family:var(--body);font-size:.92rem;font-weight:400;font-style:normal;line-height:1.65;letter-spacing:0;font-variation-settings:normal}
 .pille i{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 4px rgba(154,85,96,.15)}
 .hero h1{font-size:calc(clamp(3.2rem,8.4vw,6.7rem) * var(--d-scale));line-height:.98}
 .hero h1 em{display:block;color:var(--rose)}
