@@ -59,6 +59,17 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .logomerke .skript{position:relative;z-index:1;font-family:var(--signatur);font-size:1.8rem;line-height:.9;color:var(--rose);margin-bottom:-.3rem;padding-inline:.2em}
 .logomerke .caps{font-family:var(--display);font-size:calc(1rem * var(--d-scale));letter-spacing:.26em;margin-right:-.26em;text-transform:uppercase;font-variation-settings:var(--d-var)}
 .logomerke .undertekst{font-size:.5rem;letter-spacing:.36em;margin-right:-.36em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+/* Større logo i toppfeltet (kun header – footer og 404 er uendret) */
+header .wrap{min-height:104px}
+header .logomerke .skript{font-size:3.1rem;margin-bottom:-.45rem}
+header .logomerke .caps{font-size:calc(1.7rem * var(--d-scale))}
+header .logomerke .undertekst{font-size:.74rem;margin-top:.55rem}
+@media(max-width:600px){
+  header .wrap{min-height:88px}
+  header .logomerke .skript{font-size:2.5rem;margin-bottom:-.38rem}
+  header .logomerke .caps{font-size:calc(1.38rem * var(--d-scale))}
+  header .logomerke .undertekst{font-size:.62rem;margin-top:.45rem}
+}
 .hjertelinje{display:flex;align-items:center;gap:.5rem;margin-top:.5rem;color:var(--gold)}
 .hjertelinje::before,.hjertelinje::after{content:"";width:34px;height:1px;background:currentColor;opacity:.7}
 .hjertelinje svg{width:11px;height:11px;fill:currentColor}
