@@ -1,6 +1,6 @@
 # Ingas Elegance – nettside
 
-Nettsiden til Ingas Elegance: gel-negler, manikyr, pedikyr og voksing på Stallbakken 5C i Rælingen.
+Nettsiden til Ingas Elegance: gel-negler, manikyr, pedikyr og voksing på Marikollen Torg i Rælingen.
 
 Statisk side uten byggesteg. `index.html` er forsiden, og CSS, JavaScript, bilder og skrifter ligger i `assets/`.
 
