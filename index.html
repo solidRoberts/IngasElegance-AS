@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preload" href="/assets/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=3">
 <script src="/assets/js/site.js?v=1" defer></script>
 <script type="application/ld+json">
 {
@@ -41,15 +41,17 @@
     "addressLocality": "Fjerdingby",
     "addressCountry": "NO"
   },
+  "priceRange": "250–800 kr",
   "description": "Gel-negler, manikyr, pedikyr og voksing på Marikollen Torg i Rælingen. Timer etter avtale.",
   "founder": { "@type": "Person", "name": "Inga Spole" },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Behandlinger",
     "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gel-negler" } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "750", "priceCurrency": "NOK" }, "itemOffered": { "@type": "Service", "name": "Gel-negler" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manikyr" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pedikyr" } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "800", "priceCurrency": "NOK" }, "itemOffered": { "@type": "Service", "name": "Pedikyr" } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "250", "priceCurrency": "NOK" }, "itemOffered": { "@type": "Service", "name": "Parafin behandling" } },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Voksing" } }
     ]
   }
@@ -120,6 +122,7 @@
     <div class="bk-innhold">
       <span class="ikon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="9" width="8" height="12" rx="2.5"/><path d="M10 9V6.5h4V9M11 3.5h2v3h-2z"/></svg></span>
       <h3>Gel-negler</h3>
+      <p class="kortpris">750 kr <small>lett design inkludert</small></p>
       <p class="beskr">Gel-lakk og negldesign, fra rolig nude og klassisk rødt til glitter, french og chrome-glans.</p>
       <ul class="stiler" aria-label="Stiler"><li>Nude</li><li>Klassisk rødt</li><li>Glitter</li><li>French</li><li>Chrome</li></ul>
       <p class="tips"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>Ta gjerne med et bilde av det du ønsker deg.</p>
@@ -141,7 +144,8 @@
       <svg class="hjornekvist" viewBox="0 0 200 320" aria-hidden="true"><use href="#kvist"/></svg>
       <span class="ikon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16v-2.38C4 11.5 2.97 10.5 3 8c.03-2.72 1.49-6 4.5-6C9.37 2 10 3.8 10 5.5c0 3.11-2 5.66-2 8.68V16a2 2 0 1 1-4 0Z"/><path d="M20 20v-2.38c0-2.12 1.03-3.12 1-5.62-.03-2.72-1.49-6-4.5-6C14.63 6 14 7.8 14 9.5c0 3.11 2 5.66 2 8.68V20a2 2 0 1 0 4 0Z"/><path d="M16 17h4M4 13h4"/></svg></span>
       <h3>Pedikyr</h3>
-      <p class="beskr">Stell av føtter og tånegler, for velstelte føtter året rundt.</p>
+      <p class="kortpris">800 kr</p>
+      <p class="beskr">Stell av føtter og tånegler, for velstelte føtter året rundt. Legg til parafin behandling for 250 kr.</p>
       <a class="ring-om" href="tel:+4799410930">Ring om pedikyr</a>
     </article>
     <article class="bk">
@@ -153,7 +157,16 @@
       <a class="ring-om" href="tel:+4799410930">Ring om voksing</a>
     </article>
   </div>
-  <div class="prisnotat vis"><p><b>Hva koster det?</b> Prisen avhenger av behandling og lengde. Send en SMS, så får du pris før du bestiller time.</p><a class="btn btn-fylt" href="sms:+4799410930"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Send SMS for pris</a></div>
+  <div class="prisliste vis" id="priser" role="group" aria-labelledby="pris-tittel">
+    <div class="pl-topp"><span class="label">Prisliste</span><h3 id="pris-tittel">Hva koster det?</h3></div>
+    <ul class="pl-rader">
+      <li><span class="pl-navn">Gel-negler</span><span class="pl-pris">750 kr</span></li>
+      <li><span class="pl-navn">Pedikyr</span><span class="pl-pris">800 kr</span></li>
+      <li><span class="pl-navn">Parafin behandling</span><span class="pl-pris">250 kr</span></li>
+    </ul>
+    <p class="pl-note">*Lett design er inkludert.</p>
+    <div class="pl-under"><p>Manikyr og voksing? Send en SMS, så får du pris før du bestiller time.</p><a class="btn btn-fylt" href="sms:+4799410930"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Send SMS</a></div>
+  </div>
 </div></section>
 
 <section class="galleri" id="galleri" aria-labelledby="gal-tittel"><div class="wrap">
@@ -229,7 +242,7 @@
   <div class="sec-topp vis"><span class="label">Spørsmål og svar</span><h2 id="sp-tittel">Lurer du på noe?</h2><p>Finner du ikke svaret her, er det bare å ringe eller sende en SMS.</p></div>
   <div class="sp vis">
     <details><summary>Hvordan bestiller jeg time?</summary><p>Ring eller send en SMS til 994 10 930. Jeg har timer etter avtale, så vi finner en tid som passer deg.</p></details>
-    <details><summary>Hva koster det?</summary><p>Prisen avhenger av behandling og lengde. Send en SMS med hva du ønsker deg, så får du pris før du bestiller time.</p></details>
+    <details><summary>Hva koster det?</summary><p>Gel-negler koster 750 kr (lett design er inkludert), pedikyr 800 kr og parafin behandling 250 kr. For manikyr og voksing, send en SMS, så får du pris før du bestiller time.</p></details>
     <details><summary>Kan jeg ta med et bilde av negler jeg liker?</summary><p>Ja, ta gjerne med et bilde av det du ønsker deg, enten det er nude, french, glitter eller chrome.</p></details>
     <details><summary>Hva om jeg ikke får svar når jeg ringer?</summary><p>Send en SMS, så tar jeg kontakt.</p></details>
     <details><summary>Hvorfor kan jeg ikke bestille på nettet?</summary><p>Jeg vil heller snakke med deg. Da finner vi riktig behandling og en tid som passer, og du får vite prisen før du bestiller.</p></details>

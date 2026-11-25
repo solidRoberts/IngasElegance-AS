@@ -294,3 +294,18 @@ footer .bunn a{color:var(--on-plum);text-underline-offset:3px}
 .js .vis:not(.inne){translate:0 26px}
 .vis{transition:translate .9s cubic-bezier(.2,.7,.2,1)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .vis:not(.inne){translate:none}}
+
+/* Prisliste */
+.kortpris{font-family:var(--display);font-size:calc(1.7rem * var(--d-scale));color:var(--rose-dk);line-height:1.1}
+.kortpris small{font-family:var(--body);font-size:.82rem;color:var(--muted);margin-left:.4rem}
+.prisliste{margin-top:28px;padding:clamp(26px,4vw,48px);border-radius:28px;background:var(--blush);display:grid;gap:1.4rem;max-width:46rem;margin-inline:auto;border:1px solid var(--blush-2)}
+.pl-topp{display:grid;gap:.5rem;justify-items:center;text-align:center}
+.pl-topp h3{font-size:calc(clamp(2rem,4vw,2.8rem) * var(--d-scale))}
+.pl-rader{list-style:none}
+.pl-rader li{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;border-top:1px solid var(--blush-2)}
+.pl-rader li:first-child{border-top:0}
+.pl-navn{font-family:var(--display);font-size:calc(clamp(1.35rem,3vw,1.8rem) * var(--d-scale));color:var(--plum)}
+.pl-pris{flex:none;padding:.35rem 1.1rem;border-radius:999px;background:var(--paper);border:1px solid var(--gold);font-family:var(--display);font-size:calc(clamp(1.2rem,2.6vw,1.5rem) * var(--d-scale));color:var(--rose-dk);white-space:nowrap}
+.pl-note{text-align:center;font-style:italic;color:var(--muted)}
+.pl-under{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding-top:1.2rem;border-top:1px solid var(--blush-2)}
+.pl-under p{max-width:34ch;color:var(--muted)}
